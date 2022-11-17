@@ -1,0 +1,81 @@
+@import "./variables.css";
+
+body {
+  background-image: var(--main-bg-gradient);
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+input {
+  margin: 5px 0;
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* .container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 10px;
+} */
+
+.flex {
+  display: flex;
+}
+
+.flex--space-between {
+  justify-content: space-between;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.app__logo {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+}
+
+.app__logo img {
+  width: 50%;
+  height: auto;
+}
+
+h1 {
+  color: var(--peach);
+  font-size: var(--font-xl);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--font-m);
+  font-weight: 700;
+  padding: 50px 30px;
+}
+
+.budget__list__wrapper {
+  margin: 30px 0;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 960px;
+  }
+
+  .budget__list__wrapper {
+    flex-direction: row;
+  }
+
+  .budget__incomes,
+  .budget__expenses {
+    margin-top: 0;
+  }
+}
+.container-md {
+  margin-top: 30px;
+}
