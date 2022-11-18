@@ -40,9 +40,14 @@
       <section class=" container-md">
        <div class="row ">
           <div class="col-md-3"><input type='number' id='currencyAmount'/></div>
-          <div class="col-md-2"><select id="currencyOption"></select></div>
-          <div class="col-md-2"><input type='submit' id='currencyCalc' value='Calculate'/></div>
-          <div class="col-md-5"><p>TO <span id="calculatedValue">440</span>PLN</p></div>
+          <div class="col-md-2"><select id="currencyOption">
+            <option value="EUR">EUR</option>
+            <option value="CHF">CHF</option>
+            <option value="USD">USD</option>
+          </select></div>
+          
+          <div class="col-md-2"><input id='currencyCalc' class="btn btn-primary" type="submit" value="Calculate"></div>
+          <div class="col-md-5"><p>TO <span id="calculatedValue">440</span> PLN</p></div>
 
        </div>
       </section>
@@ -52,6 +57,6 @@
    
     </footer>
 
-    <script src="main.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
