@@ -21,12 +21,15 @@ const getRates = (rates) => {
     sel.appendChild(opt);
   }
 };
-const mid = rates.find((rate) => rate.code === selectValue.mid);
+const selectValue = sel.value;
+
+const mid = rates.find((rate) => rate.code === selectValue).mid;
 
 btn.addEventListener("click", () => {
   getCurrencyList();
   const calculation = mid * input.value;
-  calculatedValue.innerHTML = calculation;
+  return calculation;
+  calculatedValue.innerText = calculation;
 });
 
 // rates.find((rate)=>rate.code===selectValue)
