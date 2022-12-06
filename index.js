@@ -18,12 +18,7 @@ const getRates = (rates) => {
   const calculation = mid * input.value;
   calculatedValue.innerText = calculation.toFixed(2);
 };
-// const selectValue = sel.value;
 
 btn.addEventListener("click", () => {
   getCurrencyList();
 });
-
-// rates.find((rate)=>rate.code===selectValue)
-
-// const mid = rates.find((rate) => rate.code === selectValue).mid;
