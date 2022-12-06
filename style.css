@@ -2,6 +2,7 @@
 
 body {
   background-image: var(--main-bg-gradient);
+  width: 960px;
 }
 
 html {

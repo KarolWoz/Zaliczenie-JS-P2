@@ -8,28 +8,20 @@ const calculatedValue = document.querySelector("#calculatedValue");
 const getCurrencyList = () => {
   fetch(urlAll)
     .then((response) => response.json())
-    .then((data) => getRates(data.rates))
+    .then((data) => getRates(data[0].rates))
     .catch((err) => console.log(err));
 };
 
 const getRates = (rates) => {
   const selectValue = sel.value;
-  for (const rate in rates) {
-    const opt = document.createElement("option");
-    opt.value = code;
-    opt.innerText = code;
-    sel.appendChild(opt);
-  }
+  const mid = rates.find((rate) => rate.code === selectValue).mid;
+  const calculation = mid * input.value;
+  calculatedValue.innerText = calculation.toFixed(2);
 };
-const selectValue = sel.value;
-
-const mid = rates.find((rate) => rate.code === selectValue).mid;
+// const selectValue = sel.value;
 
 btn.addEventListener("click", () => {
   getCurrencyList();
-  const calculation = mid * input.value;
-  return calculation;
-  calculatedValue.innerText = calculation;
 });
 
 // rates.find((rate)=>rate.code===selectValue)
