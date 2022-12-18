@@ -21,11 +21,11 @@
     <title>Currency</title>
   </head>
   <body>
-    <main class="container">
+    <main class="container-md">
       <header>
         <h1 class="text--center">Currency Exchange</h1>
         
-        <div class="container text-center">
+        <div class="container-md text-center">
             <div class="row">
               <div class="col-3 app__logo">
                 <img src="./budget.png" />
@@ -37,16 +37,20 @@
       </header>
       <section class=" container-md">
        <div class="row ">
-          <div class="col-md-3"><input type='number' id='currencyAmount'/></div>
-          <div class="col-md-2"><select id="currencyOption">
-            <option value="EUR">EUR</option>
-            <option value="CHF">CHF</option>
-            <option value="USD">USD</option>
-          </select></div>
+        <form id="exchangeForm" class="row">
+          <div class="col-md-4"><input type='number'  min="0" id='currencyAmount'/></div>
+        
+          <div class="col-md-2">
+            <select id="currencyOption">
+              <option value="EUR">EUR</option>
+              <option value="CHF">CHF</option>
+              <option value="USD">USD</option>
+            </select>
+          </div>
           
           <div class="col-md-2"><input id='currencyCalc' class="btn btn-primary" type="submit" value="Calculate"></div>
-          <div class="col-md-5"><p>TO <span id="calculatedValue"></span> PLN</p></div>
-
+          <div class="col-md-4"><p>TO <span id="calculatedValue"></span> PLN</p></div>
+        </form>
        </div>
       </section>
     </main>

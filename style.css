@@ -80,3 +80,7 @@ h2 {
 .container-md {
   margin-top: 30px;
 }
+
+#exchangeForm {
+  padding: 5px;
+}
