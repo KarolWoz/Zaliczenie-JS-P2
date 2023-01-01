@@ -4,7 +4,6 @@ const sel = document.querySelector("#currencyOption");
 const input = document.querySelector("#currencyAmount");
 const btn = document.querySelector("#currencyCalc");
 const calculatedValue = document.querySelector("#calculatedValue");
-const exchangeForm=document.querySelector('#exchangeForm')
 
 const getCurrencyList = () => {
   fetch(urlAll)
