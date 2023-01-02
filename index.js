@@ -4,6 +4,7 @@ const sel = document.querySelector("#currencyOption");
 const input = document.querySelector("#currencyAmount");
 const btn = document.querySelector("#currencyCalc");
 const calculatedValue = document.querySelector("#calculatedValue");
+const form = document.querySelector("#exchangeForm");
 
 const getCurrencyList = () => {
   fetch(urlAll)
@@ -13,7 +14,7 @@ const getCurrencyList = () => {
 };
 
 const getCalc = (rates) => {
-  if (input.value > 0) {
+  if (input.value >= 0) {
     const selectValue = sel.value;
     const mid = rates.find((rate) => rate.code === selectValue).mid;
     const calculation = mid * input.value;
@@ -21,6 +22,7 @@ const getCalc = (rates) => {
   }
 };
 
-btn.addEventListener("click", () => {
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
   getCurrencyList();
 });
